@@ -1,0 +1,22 @@
+{
+  "name": "utkarsh-blockchain-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@solana/spl-token-registry": "^0.2.4574",
+    "@solana/web3.js": "^1.95.1",
+    "bigint-buffer": "^1.1.5",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "uuid": "^10.0.0"
+  }
+}
