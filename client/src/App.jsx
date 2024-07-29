@@ -11,7 +11,7 @@ export default function App() {
       .get(
         `${import.meta.env.VITE_BASE_API}/mainnet/activity?wallet_address=${
           import.meta.env.VITE_WALLET_ADDRESS
-        }&network=Solana`,
+        }&network=Solana&limit=10`,
       )
       .then((response) => {
         setActivities(response.data.data);
@@ -47,6 +47,7 @@ export default function App() {
             <div className="mt-5">
               <h3 className="text-lg font-bold mb-2">Token Info:</h3>
               <p>Name: {activity.token.name || "NA"}</p>
+              <p>contract_address: {activity.token.contract_address || "NA"}</p>
               <p>Symbol: {activity.token.symbol || "NA"}</p>
               <p>Decimals: {activity.token.decimals || "NA"}</p>
               {activity.token.logo_url && (
